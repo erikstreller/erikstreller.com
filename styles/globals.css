@@ -17,7 +17,7 @@
 
 @layer components {
   .layout {
-    @apply mx-auto w-[90%] max-w-2xl;
+    @apply mx-auto w-[85%] max-w-2xl;
   }
 }
 
