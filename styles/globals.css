@@ -19,6 +19,15 @@
   .layout {
     @apply mx-auto w-[85%] max-w-2xl;
   }
+  .section-heading {
+    @apply mb-4 text-2xl font-bold tracking-tight text-slate-900 dark:text-light md:text-4xl;
+  }
+  .section-description {
+    @apply mb-3 text-slate-500 dark:text-gray-400 md:text-lg;
+  }
+  .section-spacing {
+    @apply mb-16;
+  }
 }
 
 [data-fade] {

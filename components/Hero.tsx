@@ -4,7 +4,7 @@ import { SiGithub } from 'react-icons/si'
 
 export default function Hero() {
   return (
-    <div className='mb-16'>
+    <div className='section-spacing'>
       <h1 className='mb-4 text-3xl font-bold tracking-tight text-slate-900 dark:text-light md:text-5xl'>
         Erik Streller.
       </h1>
