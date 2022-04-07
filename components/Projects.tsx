@@ -6,6 +6,7 @@ import {
   SiTailwindcss,
   SiTypescript
 } from 'react-icons/si'
+import NewTab from './NewTab'
 
 export default function Projects() {
   return (
@@ -14,13 +15,7 @@ export default function Projects() {
       <p className='section-description mb-8'>Learn - Practice - Repeat</p>
       <div className='flex flex-col space-y-8'>
         {projects.map((project, id) => (
-          <a
-            key={id}
-            target='_blank'
-            rel='noopener noreferrer'
-            href={project.link}
-            className='group'
-          >
+          <NewTab key={id} href={project.link} className='group'>
             <div className='grid grid-cols-8 items-center gap-2 text-lg transition-all hover:scale-[1.01] md:text-xl'>
               <div className='col-span-1 text-slate-400 dark:text-gray-500'>
                 {project.number}
@@ -41,7 +36,7 @@ export default function Projects() {
                 {project.description}
               </div>
             </div>
-          </a>
+          </NewTab>
         ))}
       </div>
     </div>
