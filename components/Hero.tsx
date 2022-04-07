@@ -4,11 +4,11 @@ import { SiGithub } from 'react-icons/si'
 
 export default function Hero() {
   return (
-    <div>
+    <div className='mb-16'>
       <h1 className='mb-4 text-3xl font-bold tracking-tight text-slate-900 dark:text-light md:text-5xl'>
         Erik Streller.
       </h1>
-      <p className='mb-4 max-w-md text-slate-600 dark:text-gray-500 md:text-lg'>
+      <p className='mb-4 max-w-md text-slate-500 dark:text-gray-400 md:text-lg'>
         Mechanical Engineer - engineering not only gears and plants. Exploring
         web-development, learning technologies {'&'} building projects.
       </p>
@@ -18,7 +18,7 @@ export default function Hero() {
             key={id}
             className={clsx(
               'flex items-center space-x-2',
-              'text-slate-500 hover:text-black dark:text-gray-400 dark:hover:text-light'
+              'text-slate-400 hover:text-black dark:text-gray-500 dark:hover:text-light'
             )}
           >
             {link.icon}
