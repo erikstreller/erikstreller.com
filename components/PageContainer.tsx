@@ -43,7 +43,7 @@ export default function PageContainer(
 
   const meta = { ...customMeta, ...props }
 
-  meta['title'] = props.page ? `${props.page} - Erik Streller` : meta.title
+  meta['title'] = props.page ? `${props.page} – Erik Streller` : meta.title
 
   useEffect(() => setMounted(true), [])
 
