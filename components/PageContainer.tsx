@@ -55,7 +55,7 @@ export default function PageContainer(
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <div className='layout'>
-        <nav className='flex items-center justify-between py-8'>
+        <nav className='flex items-center justify-between py-8 md:pb-16'>
           <div className='space-x-6'>
             <NavItem href='/' text='Home' />
             <NavItem href='/blog' text='Blog' />
