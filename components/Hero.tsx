@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 import { IoNewspaperSharp } from 'react-icons/io5'
 import { SiGithub } from 'react-icons/si'
+import NewTab from './NewTab'
 
 export default function Hero() {
   return (
@@ -12,8 +13,9 @@ export default function Hero() {
       </p>
       <div className='flex space-x-5 text-sm md:text-base'>
         {links.map((link, id) => (
-          <a
+          <NewTab
             key={id}
+            href={link.link}
             className={clsx(
               'flex items-center space-x-2',
               'text-slate-400 hover:text-black dark:text-gray-500 dark:hover:text-light'
@@ -21,7 +23,7 @@ export default function Hero() {
           >
             {link.icon}
             <span>{link.name}</span>
-          </a>
+          </NewTab>
         ))}
       </div>
     </div>
@@ -29,6 +31,10 @@ export default function Hero() {
 }
 
 const links = [
-  { icon: <IoNewspaperSharp />, name: 'Resume' },
-  { icon: <SiGithub />, name: 'GitHub' }
+  { icon: <IoNewspaperSharp />, name: 'Resume', link: '/' },
+  {
+    icon: <SiGithub />,
+    name: 'GitHub',
+    link: 'https://github.com/erikstreller'
+  }
 ]
