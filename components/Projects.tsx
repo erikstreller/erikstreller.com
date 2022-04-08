@@ -20,10 +20,10 @@ export default function Projects() {
               <div className='col-span-1 text-slate-400 dark:text-gray-500'>
                 {project.number}
               </div>
-              <h4 className='col-span-6 flex items-center text-slate-900 dark:text-light'>
-                {project.name}
+              <div className='col-span-6 flex items-center text-slate-900 dark:text-light'>
+                <h4>{project.name}</h4>
                 <FiArrowUpRight className='ml-2' />
-              </h4>
+              </div>
               <div className='col-span-1 flex space-x-4 justify-self-end'>
                 {project.technologies.map((technology, id) => (
                   <div key={id} className={technology.color}>
