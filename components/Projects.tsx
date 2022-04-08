@@ -43,7 +43,7 @@ export default function Projects() {
   )
 }
 
-const color = {
+export const color = {
   typescript: 'text-blue-500',
   react: 'text-cyan-400',
   tailwind: 'text-emerald-500',

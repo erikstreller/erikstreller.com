@@ -4,7 +4,7 @@ import PageContainer from '@/components/PageContainer'
 export default function colophon() {
   return (
     <PageContainer page='Colophon'>
-      <div className='section-spacing'>
+      <div className='section-spacing pb-80'>
         <h1 className='page-heading'>Colophon.</h1>
         <p className='page-description'>
           Designed and developed by Erik Streller.

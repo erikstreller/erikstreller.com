@@ -14,7 +14,7 @@ export default function blog() {
           Dana {'&'} Erik
         </p>
       </div>
-      <p className='text-rose-400'>Starting in May.</p>
+      <p className='section-spacing pb-80 text-rose-400'>Starting in May.</p>
     </PageContainer>
   )
 }

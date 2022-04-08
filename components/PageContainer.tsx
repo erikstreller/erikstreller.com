@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { PropsWithChildren, useEffect, useState } from 'react'
 import { FiMoon, FiSun } from 'react-icons/fi'
+import Footer from './Footer'
 
 function NavItem({ href, text }: { href: string; text: string }) {
   const router = useRouter()
@@ -71,6 +72,7 @@ export default function PageContainer(
         </nav>
       </div>
       <main className='layout'>{props.children}</main>
+      <Footer />
     </div>
   )
 }
