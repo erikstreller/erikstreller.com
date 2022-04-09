@@ -55,7 +55,7 @@ const links = {
   figma: 'https://figma.com/',
   vercel: 'https://vercel.com/',
   github: 'https://github.com/',
-  source: 'https://github.com/erikstreller/new-me'
+  source: 'https://github.com/erikstreller/erikstreller.com'
 }
 
 const linkColor = 'text-dark dark:text-light'
