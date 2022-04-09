@@ -12,7 +12,7 @@ export default function Projects() {
   return (
     <div className='section-spacing'>
       <h3 className='section-heading'>Projects</h3>
-      <p className='section-description mb-8'>Learn - Practice - Repeat</p>
+      <p className='section-description mb-8'>Learn – Practice – Repeat</p>
       <div className='flex flex-col space-y-8'>
         {projects.map((project, id) => (
           <NewTab key={id} href={project.link} className='group'>
@@ -82,6 +82,6 @@ const projects = [
       { name: 'Typescript', icon: <SiTypescript />, color: color.typescript },
       { name: 'Tailwind', icon: <SiTailwindcss />, color: color.tailwind }
     ],
-    link: 'https://erikstreller.github.io/portfolio/'
+    link: 'https://erikstreller.github.io/space-intro/'
   }
 ]

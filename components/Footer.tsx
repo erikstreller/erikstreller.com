@@ -15,7 +15,13 @@ export default function Footer() {
           <Link key={id} href={href}>
             <a
               className={clsx(
-                pathname === href ? 'text-teal-400' : styling.textColor
+                pathname === href
+                  ? 'text-teal-400'
+                  : clsx(
+                      styling.textColor,
+                      'transition-opacity hover:opacity-60'
+                    ),
+                'w-fit'
               )}
             >
               <p>{text}</p>

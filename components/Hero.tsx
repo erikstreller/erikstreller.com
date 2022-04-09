@@ -8,7 +8,7 @@ export default function Hero() {
     <div className='section-spacing'>
       <h1 className='page-heading'>Erik Streller.</h1>
       <p className='page-description max-w-md'>
-        Mechanical Engineer - engineering not only gears and plants. Exploring
+        Mechanical Engineer – engineering not only gears and plants. Exploring
         web-development, learning technologies {'&'} building projects.
       </p>
       <div className='flex space-x-5 text-sm md:text-base'>

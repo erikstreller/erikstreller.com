@@ -5,7 +5,7 @@ export default function Blog() {
       <p className='section-description'>
         Writing about our odyssey in Portugal.
       </p>
-      <p className='text-slate-400 dark:text-gray-500'>Coming soon - May</p>
+      <p className='text-slate-400 dark:text-gray-500'>Coming soon – May</p>
     </div>
   )
 }
