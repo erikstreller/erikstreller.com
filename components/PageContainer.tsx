@@ -17,7 +17,8 @@ function NavItem({ href, text }: { href: string; text: string }) {
         className={clsx(
           isActive
             ? 'font-bold text-gray-800 dark:text-gray-200'
-            : 'rounded-lg px-3 py-2 font-normal text-gray-600 transition-all hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-800'
+            : 'rounded-lg font-normal text-gray-600 transition-all hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-800',
+          '-ml-2 px-3 py-2'
         )}
       >
         {text}
