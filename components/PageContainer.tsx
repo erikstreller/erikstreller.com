@@ -27,8 +27,9 @@ function NavItem({ href, text }: { href: string; text: string }) {
 }
 
 const customMeta = {
-  title: 'Erik Streller',
-  description: '',
+  title: 'Erik Streller – Portfolio and Blog.',
+  description:
+    'Online portfolio and blog by Erik Streller, currently living on the shores of the Atlantic Ocean – learning, designing and creating.',
   type: 'website'
 }
 
