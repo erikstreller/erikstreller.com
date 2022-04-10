@@ -9,7 +9,7 @@ export default function Custom404() {
         </h1>
         <p className='page-description'>
           Was there something you where looking for? One reason could be it
-          doesn't exist, at least not anymore.
+          doesn&apos;t exist, at least not anymore.
         </p>
       </div>
     </PageContainer>

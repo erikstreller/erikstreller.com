@@ -9,8 +9,8 @@ export default function about() {
           Erik Streller
         </p>
         <p className='page-description'>
-          Hi, I'm Erik. I started learning C# during my studies, and shortly
-          after came Python and my job as a research assistant at the
+          Hi, I&apos;m Erik. I started learning C# during my studies, and
+          shortly after came Python and my job as a research assistant at the
           university. It was great to automate the steps in our data analysis. I
           then went on to use Python for my diploma thesis to analyze hundreds
           of data collected from my welding experiments. The next step was to

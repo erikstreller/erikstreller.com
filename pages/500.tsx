@@ -8,7 +8,9 @@ export default function Custom500() {
           Server-side{' '}
           <span className='animate-flicker text-yellow-400'>error</span>.
         </h1>
-        <p className='page-description'>I don't know what happened either.</p>
+        <p className='page-description'>
+          I don&apos;t know what happened either.
+        </p>
       </div>
     </PageContainer>
   )
