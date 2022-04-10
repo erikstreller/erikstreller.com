@@ -50,5 +50,6 @@ const styling = {
 const headerGroup = [
   { href: '/', text: 'Home' },
   { href: '/blog', text: 'Blog' },
+  { href: '/about', text: 'About' },
   { href: '/colophon', text: 'Colophon' }
 ]

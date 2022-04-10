@@ -59,10 +59,15 @@ export default function PageContainer(
       </Head>
       <div className='layout'>
         <nav className='flex items-center justify-between py-8 md:pb-16'>
-          <div className='space-x-6'>
-            <NavItem href='/' text='Home' />
-            <NavItem href='/blog' text='Blog' />
-            <NavItem href='/colophon' text='Colophon' />
+          <div className='flex space-x-6'>
+            <div className='space-x-6'>
+              <NavItem href='/' text='Home' />
+              <NavItem href='/blog' text='Blog' />
+              <NavItem href='/about' text='About' />
+            </div>
+            <div className='hidden pl-2 sm:inline-block'>
+              <NavItem href='/colophon' text='Colophon' />
+            </div>
           </div>
           <button
             className='flex h-9 w-9 items-center justify-center rounded-lg bg-gray-200 ring-gray-400 transition-all hover:ring-2 dark:bg-gray-800'
