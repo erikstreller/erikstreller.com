@@ -1,3 +1,4 @@
+import Accent from '@/components/Accent'
 import PageContainer from '@/components/PageContainer'
 
 export default function about() {
@@ -6,7 +7,9 @@ export default function about() {
       <div className='section-spacing'>
         <h1 className='page-heading'>About.</h1>
         <p className='-mt-4 mb-4 text-lg text-slate-900 dark:text-light md:text-xl'>
-          Erik Streller
+          <Accent variant='yellow' className='font-semibold'>
+            Erik Streller
+          </Accent>
         </p>
         <p className='page-description'>
           Hi, I&apos;m Erik. I started learning C# during my studies, and
