@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --tw-clr-bee: 247, 208, 44;
+  --tw-clr-curcuma: 238, 129, 48;
+  --tw-clr-mind: 249, 85, 135;
+  --tw-clr-lavender: 169, 143, 243;
+  --tw-clr-azure: 52, 152, 219;
+  --tw-clr-ice: 150, 217, 214;
+  --tw-clr-grass: 0, 232, 135;
+  --tw-clr-aqua: 20, 184, 166;
+
+  --clr-bee: rgb(var(--tw-clr-bee)); /* #F7D02C */
+  --clr-curcuma: rgb(var(--tw-clr-curcuma)); /* #EE8130 */
+  --clr-mind: rgb(var(--tw-clr-mind)); /* #F95587 */
+  --clr-lavender: rgb(var(--tw-clr-lavender)); /* #A98FF3 */
+  --clr-azure: rgb(var(--tw-clr-azure)); /* #3498DB */
+  --clr-ice: rgb(var(--tw-clr-ice)); /* #96D9D6 */
+  --clr-grass: rgb(var(--tw-clr-grass)); /* #00e887 */
+  --clr-aqua: rgb(var(--tw-clr-aqua)); /* #14b8a6 */
+}
+
 html {
   min-width: 360px;
   scroll-behavior: smooth;

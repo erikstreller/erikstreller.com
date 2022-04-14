@@ -1,5 +1,14 @@
 const { fontFamily } = require('tailwindcss/defaultTheme')
 
+function withOpacity(variableName) {
+  return ({ opacityValue }) => {
+    if (opacityValue !== undefined) {
+      return `rgba(var(${variableName}), ${opacityValue})`
+    }
+    return `rgb(var(${variableName}))`
+  }
+}
+
 module.exports = {
   content: ['./pages/**/*.tsx', './components/**/*.tsx'],
   darkMode: 'class',
@@ -10,7 +19,15 @@ module.exports = {
       },
       colors: {
         light: '#fefefe',
-        dark: '#0D1117'
+        dark: '#0D1117',
+        bee: withOpacity('--tw-clr-bee'),
+        curcuma: withOpacity('--tw-clr-curcuma'),
+        mind: withOpacity('--tw-clr-mind'),
+        lavender: withOpacity('--tw-clr-lavender'),
+        azure: withOpacity('--tw-clr-azure'),
+        ice: withOpacity('--tw-clr-ice'),
+        grass: withOpacity('--tw-clr-grass'),
+        aqua: withOpacity('--tw-clr-aqua')
       },
       keyframes: {
         flicker: {
