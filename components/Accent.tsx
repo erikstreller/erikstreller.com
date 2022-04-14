@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import { ComponentPropsWithoutRef, PropsWithChildren } from 'react'
 
 export type AccentProps = {
-  variant: 'blue' | 'yellow'
+  variant: 'blue' | 'yellow' | 'pink' | 'green'
 } & ComponentPropsWithoutRef<'span'>
 
 export default function Accent({
@@ -13,11 +13,17 @@ export default function Accent({
   let gradient
 
   switch (variant) {
-    case 'yellow':
-      gradient = 'from-yellow-400 to-red-400'
-      break
     case 'blue':
-      gradient = 'from-teal-400 to-sky-400'
+      gradient = 'from-ice/50 to-azure/50 dark:from-ice dark:to-azure'
+      break
+    case 'yellow':
+      gradient = 'from-bee/50 to-curcuma/50 dark:from-bee dark:to-curcuma'
+      break
+    case 'pink':
+      gradient = 'from-mind/50 to-lavender/50 dark:from-mind dark:to-lavender'
+      break
+    case 'green':
+      gradient = 'from-grass/50 to-aqua/50 dark:from-grass dark:to-aqua'
       break
   }
 
@@ -25,7 +31,7 @@ export default function Accent({
     <span
       className={clsx(
         className,
-        'bg-gradient-to-tr bg-clip-text text-transparent',
+        'bg-gradient-to-bl dark:bg-clip-text dark:text-transparent',
         gradient
       )}
     >
