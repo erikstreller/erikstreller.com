@@ -1,12 +1,15 @@
 import clsx from 'clsx'
 import { IoNewspaperSharp } from 'react-icons/io5'
 import { SiGithub } from 'react-icons/si'
+import Accent from './Accent'
 import NewTab from './NewTab'
 
 export default function Hero() {
   return (
     <div className='section-spacing'>
-      <h1 className='page-heading'>Erik Streller.</h1>
+      <h1 className='page-heading'>
+        <Accent variant='yellow'>Erik Streller.</Accent>
+      </h1>
       <p className='page-description max-w-md'>
         Mechanical Engineer – engineering not only gears and plants. Exploring
         web-development, learning technologies {'&'} building projects.
@@ -17,7 +20,7 @@ export default function Hero() {
             key={id}
             href={link.link}
             className={clsx(
-              'flex items-center space-x-2',
+              'flex items-center space-x-2 transition-colors',
               'text-slate-400 hover:text-black dark:text-gray-500 dark:hover:text-light'
             )}
           >

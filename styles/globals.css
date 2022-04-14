@@ -59,6 +59,18 @@ html {
   .section-spacing {
     @apply mb-16;
   }
+  .blue-card-color {
+    @apply from-ice/50 to-azure/50 hover:from-ice hover:to-azure;
+  }
+  .yellow-card-color {
+    @apply from-bee/50 to-curcuma/50 hover:from-bee hover:to-curcuma;
+  }
+  .pink-card-color {
+    @apply from-mind/50 to-lavender/50 hover:from-mind hover:to-lavender;
+  }
+  .green-card-color {
+    @apply from-aqua/50 to-grass/50 hover:from-aqua hover:to-grass;
+  }
 }
 
 [data-fade] {
