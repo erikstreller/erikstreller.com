@@ -5,11 +5,21 @@ import Accent from './Accent'
 import NewTab from './NewTab'
 
 export default function Hero() {
+  function headingColor() {
+    if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+      return (
+        <>
+          Erik Streller<Accent variant='pink'>.</Accent>
+        </>
+      )
+    } else {
+      return <Accent variant='yellow'>Erik Streller.</Accent>
+    }
+  }
+
   return (
     <div className='section-spacing'>
-      <h1 className='page-heading'>
-        <Accent variant='yellow'>Erik Streller.</Accent>
-      </h1>
+      <h1 className='page-heading'>{headingColor()}</h1>
       <p className='page-description max-w-md'>
         Mechanical Engineer – engineering not only gears and plants. Exploring
         web-development, learning technologies {'&'} building projects.
