@@ -1,12 +1,43 @@
 import { allBlogs } from '@/.contentlayer/generated'
+import Accent from '@/components/Accent'
 import PageContainer from '@/components/PageContainer'
 import { pick } from '@/utils/pick'
+import clsx from 'clsx'
 import { InferGetStaticPropsType } from 'next'
+import { useTheme } from 'next-themes'
+import Image from 'next/image'
 import Link from 'next/link'
+import { HiOutlineClock, HiOutlineEye } from 'react-icons/hi'
 
 export default function blog({
   posts
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  const { theme } = useTheme()
+
+  function layout(id: number): string {
+    if (id % 2 === 0) {
+      return 'md:flex-row'
+    } else {
+      return 'md:flex-row-reverse'
+    }
+  }
+
+  function textSide(id: number): string {
+    if (id % 2 === 0) {
+      return 'px-3 md:pl-3 md:pr-0'
+    } else {
+      return 'px-3 md:pr-3 md:pl-0'
+    }
+  }
+
+  function pictureSide(id: number): string {
+    if (id % 2 === 0) {
+      return 'px-3 md:pr-[10px] md:pl-0'
+    } else {
+      return 'px-3 md:pl-[10px] md:pr-0'
+    }
+  }
+
   if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
     return (
       <PageContainer page='Blog'>
@@ -21,13 +52,70 @@ export default function blog({
             Dana {'&'} Erik
           </p>
         </div>
-        <p className='section-spacing text-rose-400'>Starting in May.</p>
         <div className='mt-16 pb-80'>
           {posts.map((post, id) => (
             <Link key={id} href={`/blog/${post.slug}`}>
-              <a>
-                <h2 className='mb-1 text-xl font-semibold'>{post.title}</h2>
-                <p className='mb-6'>{post.summary}</p>
+              <a className='w-full'>
+                <div
+                  className={clsx(
+                    'mb-14 flex flex-col rounded-lg border border-zinc-200 transition hover:scale-[1.01] dark:border-zinc-800 md:gap-4',
+                    layout(id)
+                  )}
+                >
+                  <div
+                    className={clsx(
+                      'flex flex-col justify-between gap-3 py-2 md:w-1/2 md:gap-0',
+                      textSide(id)
+                    )}
+                  >
+                    <div className='flex flex-col'>
+                      <h4 className='mb-1 text-xl font-semibold tracking-tight'>
+                        {post.title}
+                      </h4>
+                      <p className='text-slate-500 dark:text-gray-400'>
+                        {post.summary}
+                      </p>
+                    </div>
+                    <div className='post-infos-container text-sm'>
+                      <div className='post-info-box'>
+                        <HiOutlineClock />
+                        <Accent
+                          variant='yellow'
+                          className={clsx(
+                            theme === 'dark' ? 'font-medium' : ''
+                          )}
+                        >
+                          {post.readingTime.text}
+                        </Accent>
+                      </div>
+                      <div className='post-info-box'>
+                        <HiOutlineEye />
+                        <Accent
+                          variant='yellow'
+                          className={clsx(
+                            theme === 'dark' ? 'font-medium' : ''
+                          )}
+                        >
+                          33 views
+                        </Accent>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className={clsx(
+                      '-mb-6 pt-[10px] drop-shadow-md md:w-1/2',
+                      pictureSide(id)
+                    )}
+                  >
+                    <Image
+                      alt={post.title}
+                      src={post.image}
+                      width={1200}
+                      height={630}
+                      className='rounded-lg'
+                    />
+                  </div>
+                </div>
               </a>
             </Link>
           ))}
@@ -56,7 +144,16 @@ export default function blog({
 
 export function getStaticProps() {
   const posts = allBlogs
-    .map((blog) => pick(blog, ['slug', 'title', 'summary', 'puplishedAt']))
+    .map((blog) =>
+      pick(blog, [
+        'slug',
+        'title',
+        'summary',
+        'puplishedAt',
+        'readingTime',
+        'image'
+      ])
+    )
     .sort(
       (a, b) =>
         Number(new Date(b.puplishedAt)) - Number(new Date(a.puplishedAt))
