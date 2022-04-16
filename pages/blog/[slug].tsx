@@ -1,9 +1,13 @@
 import Accent from '@/components/Accent'
 import PageContainer from '@/components/PageContainer'
+import clsx from 'clsx'
 import type { Blog } from 'contentlayer/generated'
 import { allBlogs } from 'contentlayer/generated'
+import { format, parseISO } from 'date-fns'
 import { useMDXComponent } from 'next-contentlayer/hooks'
+import { useTheme } from 'next-themes'
 import Image from 'next/image'
+import { HiOutlineClock, HiOutlineEye } from 'react-icons/hi'
 
 const mdxComponents = {
   Image
@@ -11,13 +15,56 @@ const mdxComponents = {
 
 export default function Post({ post }: { post: Blog }) {
   const MDXContent = useMDXComponent(post.body.code)
+  const { theme } = useTheme()
+
+  const infos = [
+    {
+      text: post.readingTime.text,
+      icon: <HiOutlineClock />
+    },
+    { text: '33 views', icon: <HiOutlineEye /> }
+  ]
 
   if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
     return (
       <PageContainer page={post.title}>
-        <Accent variant='yellow' className='text-2xl font-bold tracking-tight'>
-          {post.title}
-        </Accent>
+        <article className='flex flex-col gap-4'>
+          <h2 className='text-3xl font-bold tracking-tight text-slate-900 dark:text-light md:text-4xl'>
+            {post.title}
+          </h2>
+          <div className='flex w-full flex-col gap-2 md:flex-row md:justify-between'>
+            <div className='text-slate-500 dark:text-gray-400'>
+              {format(parseISO(post.puplishedAt), 'dd MMMM yyyy')}
+            </div>
+            <div className='flex gap-4'>
+              {infos.map((info, id) => (
+                <div
+                  key={id}
+                  className='flex items-center gap-2 text-dark dark:text-light'
+                >
+                  {info.icon}
+                  <Accent
+                    variant='yellow'
+                    className={clsx(theme === 'dark' ? 'font-medium' : '')}
+                  >
+                    {info.text}
+                  </Accent>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className='-mb-1 md:py-2'>
+            <Image
+              alt={post.title}
+              src={post.image}
+              width={1200}
+              height={630}
+              priority
+              className='rounded-lg'
+            />
+          </div>
+          <p className='text-slate-900 dark:text-light'>{post.summary}.</p>
+        </article>
         <div className='section-spacing prose mt-6 max-w-none pb-80 dark:prose-invert'>
           <MDXContent components={mdxComponents} />
         </div>
