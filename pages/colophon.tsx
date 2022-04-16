@@ -1,7 +1,7 @@
 import NewTab from '@/components/NewTab'
 import PageContainer from '@/components/PageContainer'
 
-export default function colophon() {
+export default function Colophon() {
   return (
     <PageContainer page='Colophon'>
       <div className='section-spacing pb-80'>
