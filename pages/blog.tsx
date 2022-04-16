@@ -9,7 +9,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { HiOutlineClock, HiOutlineEye } from 'react-icons/hi'
 
-export default function blog({
+export default function Blog({
   posts
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { theme } = useTheme()

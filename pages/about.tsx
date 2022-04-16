@@ -1,7 +1,7 @@
 import Accent from '@/components/Accent'
 import PageContainer from '@/components/PageContainer'
 
-export default function about() {
+export default function About() {
   function nameColor() {
     if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
       return (
