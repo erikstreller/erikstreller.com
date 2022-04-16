@@ -71,6 +71,12 @@ html {
   .green-card-color {
     @apply from-aqua/50 to-grass/50 hover:from-aqua hover:to-grass;
   }
+  .post-infos-container {
+    @apply flex gap-4;
+  }
+  .post-info-box {
+    @apply flex items-center gap-2 text-dark dark:text-light;
+  }
 }
 
 [data-fade] {

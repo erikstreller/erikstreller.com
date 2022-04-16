@@ -36,12 +36,9 @@ export default function Post({ post }: { post: Blog }) {
             <div className='text-slate-500 dark:text-gray-400'>
               {format(parseISO(post.puplishedAt), 'dd MMMM yyyy')}
             </div>
-            <div className='flex gap-4'>
+            <div className='post-infos-container'>
               {infos.map((info, id) => (
-                <div
-                  key={id}
-                  className='flex items-center gap-2 text-dark dark:text-light'
-                >
+                <div key={id} className='post-info-box'>
                   {info.icon}
                   <Accent
                     variant='yellow'
