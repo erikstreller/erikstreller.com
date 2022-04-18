@@ -60,22 +60,67 @@ html {
     @apply mb-16;
   }
   .blue-card-color {
-    @apply from-ice/50 to-azure/50 hover:from-ice hover:to-azure;
+    @apply from-aqua/40 to-azure/40 hover:from-aqua hover:to-azure;
   }
   .yellow-card-color {
-    @apply from-bee/50 to-curcuma/50 hover:from-bee hover:to-curcuma;
+    @apply from-bee/40 to-curcuma/40 hover:from-bee hover:to-curcuma;
   }
   .pink-card-color {
-    @apply from-mind/50 to-lavender/50 hover:from-mind hover:to-lavender;
+    @apply from-mind/40 to-lavender/40 hover:from-mind hover:to-lavender;
   }
   .green-card-color {
-    @apply from-aqua/50 to-grass/50 hover:from-aqua hover:to-grass;
+    @apply from-aqua/40 to-grass/40 hover:from-aqua hover:to-grass;
   }
   .post-infos-container {
     @apply flex gap-4;
   }
   .post-info-box {
     @apply flex items-center gap-2 text-dark dark:text-light;
+  }
+}
+
+@layer utilities {
+  .animate-underline-blue,
+  .animate-underline-yellow,
+  .animate-underline-pink,
+  .animate-underline-green {
+    background-size: 0 2px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: 0.3s ease-in-out;
+    transition-property: background-size, color, background-color, border-color;
+  }
+  .animate-underline-blue {
+    background-image: linear-gradient(transparent, transparent),
+      linear-gradient(to right, var(--clr-azure), var(--clr-aqua));
+  }
+  .animate-underline-yellow {
+    background-image: linear-gradient(transparent, transparent),
+      linear-gradient(to right, var(--clr-curcuma), var(--clr-bee));
+  }
+  .animate-underline-pink {
+    background-image: linear-gradient(transparent, transparent),
+      linear-gradient(to right, var(--clr-lavender), var(--clr-mind));
+  }
+  .animate-underline-green {
+    background-image: linear-gradient(transparent, transparent),
+      linear-gradient(to right, var(--clr-grass), var(--clr-aqua));
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-underline-blue,
+    .animate-underline-yellow,
+    .animate-underline-pink,
+    .animate-underline-green {
+      transition: none;
+    }
+  }
+  .animate-underline-blue:hover,
+  .animate-underline-yellow:hover,
+  .animate-underline-pink:hover,
+  .animate-underline-green:hover,
+  .start-animate-underline {
+    background-size: 100% 2px;
+    background-position: 0 100%;
   }
 }
 

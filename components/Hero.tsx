@@ -2,27 +2,14 @@ import clsx from 'clsx'
 import Image from 'next/image'
 import { IoNewspaperSharp } from 'react-icons/io5'
 import { SiGithub } from 'react-icons/si'
-import Accent from './Accent'
 import NewTab from './NewTab'
 
 export default function Hero() {
-  function headingColor() {
-    if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-      return (
-        <>
-          Erik Streller<Accent variant='pink'>.</Accent>
-        </>
-      )
-    } else {
-      return <Accent variant='yellow'>Erik Streller.</Accent>
-    }
-  }
-
   return (
     <div className='section-spacing flex flex-col-reverse sm:flex-row sm:justify-between'>
       <div className='flex flex-col'>
-        <h1 className='page-heading'>{headingColor()}</h1>
-        <p className='page-description sm:max-w-[376px] md:max-w-md'>
+        <h1 className='page-heading'>Erik Streller.</h1>
+        <p className='page-description sm:max-w-[376px] md:max-w-[424px]'>
           Mechanical Engineer – engineering not only gears and plants. Exploring
           web-development, learning technologies {'&'} building projects.
         </p>
