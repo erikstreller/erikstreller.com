@@ -2,28 +2,14 @@ import Accent from '@/components/Accent'
 import PageContainer from '@/components/PageContainer'
 
 export default function About() {
-  function nameColor() {
-    if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-      return (
-        <Accent variant='pink' className='font-semibold'>
-          Erik Streller
-        </Accent>
-      )
-    } else {
-      return (
-        <Accent variant='yellow' className='font-semibold'>
-          Erik Streller.
-        </Accent>
-      )
-    }
-  }
-
   return (
     <PageContainer page='About'>
       <div className='section-spacing'>
         <h1 className='page-heading'>About.</h1>
         <p className='-mt-4 mb-4 text-lg text-slate-900 dark:text-light md:text-xl'>
-          {nameColor()}
+          <Accent variant='blue' className='font-semibold'>
+            Erik Streller
+          </Accent>
         </p>
         <p className='page-description'>
           Hi, I&apos;m Erik. I started learning C# during my studies, and

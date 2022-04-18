@@ -14,7 +14,7 @@ export default function Accent({
 
   switch (variant) {
     case 'blue':
-      gradient = 'from-ice/50 to-azure/50 dark:from-ice dark:to-azure'
+      gradient = 'from-aqua/50 to-azure/50 dark:from-aqua dark:to-azure'
       break
     case 'yellow':
       gradient = 'from-bee/50 to-curcuma/50 dark:from-bee dark:to-curcuma'
