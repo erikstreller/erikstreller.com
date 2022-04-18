@@ -70,6 +70,7 @@ export default function PageContainer(
             </div>
           </div>
           <button
+            aria-label='toggle theme'
             className='flex h-9 w-9 items-center justify-center rounded-lg bg-gray-200 ring-gray-400 transition-all hover:ring-2 dark:bg-gray-800'
             onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
           >
