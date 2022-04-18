@@ -7,7 +7,7 @@ export default function About() {
       <div className='section-spacing'>
         <h1 className='page-heading'>About.</h1>
         <p className='-mt-4 mb-4 text-lg md:text-xl'>
-          <Accent variant='blue' className='font-semibold'>
+          <Accent variant='yellow' className='font-semibold'>
             Erik Streller
           </Accent>
         </p>
@@ -22,9 +22,9 @@ export default function About() {
         </p>
         <p className='page-description'>
           A short time later, my interest in front-end development grew. I
-          started learning HTML and CSS, followed by React, JavaScript, and
-          TypeScript. I enjoy learning something new and mastering technologies
-          (even if it takes a lot of time and work).
+          started learning HTML and CSS, followed by JavaScript, TypeScript and
+          React. I enjoy learning something new and mastering technologies (even
+          if it takes a lot of time and work).
         </p>
         <p className='page-description pb-40'>
           Currently, my favorite framework is Next.js with Typescript and
