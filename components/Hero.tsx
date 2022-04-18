@@ -20,7 +20,7 @@ export default function Hero() {
               href={link.link}
               className={clsx(
                 'flex items-center space-x-2 transition-colors',
-                'text-slate-400 hover:text-black dark:text-gray-500 dark:hover:text-light'
+                'text-light-minor hover:text-coal dark:text-dark-minor dark:hover:text-light'
               )}
             >
               {link.icon}

@@ -45,16 +45,16 @@ html {
     @apply mx-auto w-[85%] max-w-2xl;
   }
   .page-heading {
-    @apply mb-4 text-3xl font-bold tracking-tight text-slate-900 dark:text-light md:text-5xl;
+    @apply mb-4 text-3xl font-bold tracking-tight md:text-5xl;
   }
   .page-description {
-    @apply mb-4 text-slate-500 dark:text-gray-400 md:text-lg;
+    @apply mb-4 text-light-medium dark:text-dark-medium md:text-lg;
   }
   .section-heading {
-    @apply mb-4 text-2xl font-bold tracking-tight text-slate-900 dark:text-light md:text-4xl;
+    @apply mb-4 text-2xl font-bold tracking-tight md:text-4xl;
   }
   .section-description {
-    @apply mb-3 text-slate-500 dark:text-gray-400 md:text-lg;
+    @apply mb-3 text-light-medium dark:text-dark-medium md:text-lg;
   }
   .section-spacing {
     @apply mb-16;
@@ -75,7 +75,7 @@ html {
     @apply flex gap-4;
   }
   .post-info-box {
-    @apply flex items-center gap-2 text-dark dark:text-light;
+    @apply flex items-center gap-2;
   }
 }
 

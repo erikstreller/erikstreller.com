@@ -78,4 +78,4 @@ const links = {
   source: 'https://github.com/erikstreller/erikstreller.com'
 }
 
-const linkColor = 'text-dark dark:text-light'
+const linkColor = 'text-coal dark:text-light'

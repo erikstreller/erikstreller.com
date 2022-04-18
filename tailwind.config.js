@@ -1,4 +1,5 @@
 const { fontFamily } = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
 
 function withOpacity(variableName) {
   return ({ opacityValue }) => {
@@ -18,8 +19,15 @@ module.exports = {
         sans: ['Inter', ...fontFamily.sans]
       },
       colors: {
+        coal: '#0D1117',
         light: '#fefefe',
-        dark: '#0D1117',
+        'light-card': colors.zinc[200] /* #e4e4e7 */,
+        'light-medium': colors.slate[500] /* #64748b */,
+        'light-minor': colors.slate[400] /* #94a3b8 */,
+        dark: colors.slate[900] /* #0f172a */,
+        'dark-card': colors.zinc[800] /* #27272a */,
+        'dark-medium': colors.gray[400] /* #9ca3af */,
+        'dark-minor': colors.gray[500] /* #6b7280 */,
         bee: withOpacity('--tw-clr-bee'),
         curcuma: withOpacity('--tw-clr-curcuma'),
         mind: withOpacity('--tw-clr-mind'),

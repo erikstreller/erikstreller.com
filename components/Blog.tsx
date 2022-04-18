@@ -30,7 +30,7 @@ export default function Blog() {
           ))}
         </div>
         <Link href='/blog'>
-          <a className='text-slate-400 transition-colors hover:text-black dark:text-gray-500 dark:hover:text-light'>
+          <a className='text-light-minor transition-colors hover:text-coal dark:text-dark-minor dark:hover:text-light'>
             See more posts &rarr;
           </a>
         </Link>
@@ -44,7 +44,7 @@ export default function Blog() {
           Writing about our adventures in Portugal.
         </p>
         <Link href='/blog'>
-          <a className='text-slate-400 transition-colors hover:text-black dark:text-gray-500 dark:hover:text-light'>
+          <a className='text-light-minor transition-colors hover:text-coal dark:text-dark-minor dark:hover:text-light'>
             Coming soon &rarr;
           </a>
         </Link>

@@ -44,7 +44,7 @@ export default function Footer() {
 
 const styling = {
   iconSize: 15,
-  textColor: 'text-slate-500 dark:text-gray-400'
+  textColor: 'text-light-medium dark:text-dark-medium'
 }
 
 const headerGroup = [

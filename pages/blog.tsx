@@ -4,7 +4,6 @@ import PageContainer from '@/components/PageContainer'
 import { pick } from '@/utils/pick'
 import clsx from 'clsx'
 import { InferGetStaticPropsType } from 'next'
-import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import Link from 'next/link'
 import { HiOutlineClock, HiOutlineEye } from 'react-icons/hi'
@@ -12,8 +11,6 @@ import { HiOutlineClock, HiOutlineEye } from 'react-icons/hi'
 export default function Blog({
   posts
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { theme } = useTheme()
-
   function layout(id: number): string {
     if (id % 2 === 0) {
       return 'md:flex-row'
@@ -48,7 +45,7 @@ export default function Blog({
             and dance together for the next few years. This blog is for family
             and friends and anyone who wants to follow us on our journey.
           </p>
-          <p className='text-sm text-slate-400 dark:text-gray-500 md:text-base'>
+          <p className='text-sm text-light-minor dark:text-dark-minor md:text-base'>
             Dana {'&'} Erik
           </p>
         </div>
@@ -58,7 +55,7 @@ export default function Blog({
               <a className='w-full'>
                 <div
                   className={clsx(
-                    'mb-14 flex flex-col rounded-lg border border-zinc-200 transition hover:scale-[1.01] dark:border-zinc-800 md:gap-4',
+                    'mb-14 flex flex-col rounded-lg border border-light-card transition hover:scale-[1.01] dark:border-dark-card md:gap-4',
                     layout(id)
                   )}
                 >
@@ -72,30 +69,20 @@ export default function Blog({
                       <h4 className='mb-1 text-xl font-semibold tracking-tight'>
                         {post.title}
                       </h4>
-                      <p className='text-slate-500 dark:text-gray-400'>
+                      <p className='text-light-medium dark:text-dark-medium'>
                         {post.summary}
                       </p>
                     </div>
                     <div className='post-infos-container text-sm'>
                       <div className='post-info-box'>
                         <HiOutlineClock />
-                        <Accent
-                          variant='yellow'
-                          className={clsx(
-                            theme === 'dark' ? 'font-medium' : ''
-                          )}
-                        >
+                        <Accent variant='yellow' className='dark:font-medium'>
                           {post.readingTime.text}
                         </Accent>
                       </div>
                       <div className='post-info-box'>
                         <HiOutlineEye />
-                        <Accent
-                          variant='yellow'
-                          className={clsx(
-                            theme === 'dark' ? 'font-medium' : ''
-                          )}
-                        >
+                        <Accent variant='yellow' className='dark:font-medium'>
                           33 views
                         </Accent>
                       </div>
@@ -132,7 +119,7 @@ export default function Blog({
             and dance together for the next few years. This blog is for family
             and friends and anyone who wants to follow us on our journey.
           </p>
-          <p className='text-sm text-slate-400 dark:text-gray-500 md:text-base'>
+          <p className='text-sm text-light-minor dark:text-dark-minor md:text-base'>
             Dana {'&'} Erik
           </p>
         </div>

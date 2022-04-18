@@ -6,7 +6,7 @@ export default function About() {
     <PageContainer page='About'>
       <div className='section-spacing'>
         <h1 className='page-heading'>About.</h1>
-        <p className='-mt-4 mb-4 text-lg text-slate-900 dark:text-light md:text-xl'>
+        <p className='-mt-4 mb-4 text-lg md:text-xl'>
           <Accent variant='blue' className='font-semibold'>
             Erik Streller
           </Accent>
