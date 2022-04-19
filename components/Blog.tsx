@@ -6,12 +6,12 @@ export default function Blog() {
     const featuredPosts = [
       {
         title: 'The beautiful achitecture of Lisbon',
-        description: "Porto is famous for it's wine and surfing",
+        description: "A trip through the diversity of Lisbon's architecture",
         views: '12'
       },
       {
         title: "The Ocean and it's misteries",
-        description: "Porto is famous for it's wine and surfing",
+        description: "About the Atlantic Ocean and it's wide shoreline",
         views: '34'
       },
       {
@@ -45,7 +45,7 @@ export default function Blog() {
         </p>
         <Link href='/blog'>
           <a className='text-light-minor transition-colors hover:text-coal dark:text-dark-minor dark:hover:text-light'>
-            Coming soon &rarr;
+            See preview &rarr;
           </a>
         </Link>
       </div>
