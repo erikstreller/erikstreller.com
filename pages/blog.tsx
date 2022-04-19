@@ -35,21 +35,27 @@ export default function Blog({
     }
   }
 
-  if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-    return (
-      <PageContainer page='Blog'>
-        <div className='section-spacing'>
-          <h1 className='page-heading'>Blog.</h1>
-          <p className='page-description'>
-            Many new adventures await us in Portugal, where we will live, work
-            and dance together for the next few years. This blog is for family
-            and friends and anyone who wants to follow us on our journey.
-          </p>
+  return (
+    <PageContainer page='Blog'>
+      <div className='section-spacing'>
+        <h1 className='page-heading'>Blog.</h1>
+        <p className='page-description'>
+          Many new adventures await us in Portugal, where we will live, work and
+          dance together for the next few years. This blog is for family and
+          friends and anyone who wants to follow us on our journey.
+        </p>
+        <div className='flex justify-between'>
+          <Accent variant='yellow' className='dark:font-medium'>
+            Starting in May
+          </Accent>
           <p className='text-sm text-light-minor dark:text-dark-minor md:text-base'>
             Dana {'&'} Erik
           </p>
         </div>
-        <div className='mt-16 pb-80'>
+      </div>
+      <div className='pb-4'>
+        <h3 className='section-heading'>Preview</h3>
+        <div className='pt-6'>
           {posts.map((post, id) => (
             <Link key={id} href={`/blog/${post.slug}`}>
               <a className='w-full'>
@@ -107,26 +113,9 @@ export default function Blog({
             </Link>
           ))}
         </div>
-      </PageContainer>
-    )
-  } else {
-    return (
-      <PageContainer page='Blog'>
-        <div className='section-spacing'>
-          <h1 className='page-heading'>Blog.</h1>
-          <p className='page-description'>
-            Many new adventures await us in Portugal, where we will live, work
-            and dance together for the next few years. This blog is for family
-            and friends and anyone who wants to follow us on our journey.
-          </p>
-          <p className='text-sm text-light-minor dark:text-dark-minor md:text-base'>
-            Dana {'&'} Erik
-          </p>
-        </div>
-        <p className='section-spacing pb-80 text-rose-400'>Starting in May.</p>
-      </PageContainer>
-    )
-  }
+      </div>
+    </PageContainer>
+  )
 }
 
 export function getStaticProps() {
