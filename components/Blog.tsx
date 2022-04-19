@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Accent from './Accent'
 import FeaturedPostCard from './FeaturedPostCard'
 
 export default function Blog() {
@@ -44,8 +45,10 @@ export default function Blog() {
           Writing about our adventures in Portugal.
         </p>
         <Link href='/blog'>
-          <a className='text-light-minor transition-colors hover:text-coal dark:text-dark-minor dark:hover:text-light'>
-            See preview &rarr;
+          <a>
+            <Accent variant='yellow' className='dark:font-medium'>
+              See preview &rarr;
+            </Accent>
           </a>
         </Link>
       </div>
