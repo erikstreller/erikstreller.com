@@ -22,7 +22,7 @@ export default function Colophon() {
           <NewTab href={links.mdx} className={linkColor}>
             MDX
           </NewTab>{' '}
-          (currently in dev mode) and implemented via{' '}
+          and implemented via{' '}
           <NewTab href={links.contentlayer} className={linkColor}>
             Contenlayer
           </NewTab>
