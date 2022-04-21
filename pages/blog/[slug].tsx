@@ -7,6 +7,7 @@ import { allBlogs } from 'contentlayer/generated'
 import { format, parseISO } from 'date-fns'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import Image from 'next/image'
+import { useEffect } from 'react'
 import { HiOutlineClock, HiOutlineEye } from 'react-icons/hi'
 import useSWR from 'swr'
 
@@ -18,6 +19,15 @@ export default function Post({ post }: { post: Blog }) {
   const MDXContent = useMDXComponent(post.body.code)
   const { data } = useSWR<Views>(`/api/views/${post.slug}`, fetcher)
   const views = data?.total
+
+  useEffect(() => {
+    const registerView = () =>
+      fetch(`/api/views/${post.slug}`, {
+        method: 'POST'
+      })
+
+    registerView()
+  }, [post.slug])
 
   const infos = [
     {
