@@ -1,11 +1,14 @@
 import Accent from '@/components/Accent'
 import PageContainer from '@/components/PageContainer'
+import fetcher from '@/lib/fetcher'
+import { Views } from '@/lib/types'
 import type { Blog } from 'contentlayer/generated'
 import { allBlogs } from 'contentlayer/generated'
 import { format, parseISO } from 'date-fns'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import Image from 'next/image'
 import { HiOutlineClock, HiOutlineEye } from 'react-icons/hi'
+import useSWR from 'swr'
 
 const mdxComponents = {
   Image
@@ -13,13 +16,18 @@ const mdxComponents = {
 
 export default function Post({ post }: { post: Blog }) {
   const MDXContent = useMDXComponent(post.body.code)
+  const { data } = useSWR<Views>(`/api/views/${post.slug}`, fetcher)
+  const views = data?.total
 
   const infos = [
     {
       text: post.readingTime.text,
       icon: <HiOutlineClock />
     },
-    { text: '33 views', icon: <HiOutlineEye /> }
+    {
+      text: (views ? new Number(views).toLocaleString() : '---') + ' views',
+      icon: <HiOutlineEye />
+    }
   ]
 
   return (

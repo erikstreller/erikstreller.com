@@ -1,4 +1,3 @@
-
 export type PostCardProps = {
   post: {
     title: string
@@ -23,4 +22,8 @@ export type ProjectCardProps = {
     })[];
     link: string;
   }
+}
+
+export type Views = {
+  total: number
 }
