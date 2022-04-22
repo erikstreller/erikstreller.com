@@ -21,7 +21,11 @@ export default function Post({ post }: { post: Blog }) {
       icon: <HiOutlineClock />
     },
     {
-      text: <ViewCounter slug={post.slug} />,
+      text: (
+        <span className='flex items-center gap-[6px]'>
+          <ViewCounter slug={post.slug} /> views
+        </span>
+      ),
       icon: <HiOutlineEye />
     }
   ]
@@ -40,11 +44,8 @@ export default function Post({ post }: { post: Blog }) {
             {infos.map((info, id) => (
               <div key={id} className='post-info-box'>
                 {info.icon}
-                <Accent
-                  variant='yellow'
-                  className='flex items-center gap-[6px] dark:font-medium'
-                >
-                  {info.text} views
+                <Accent variant='yellow' className='dark:font-medium'>
+                  {info.text}
                 </Accent>
               </div>
             ))}
