@@ -21,12 +21,15 @@ export default function Post({ post }: { post: Blog }) {
   const views = data?.total
 
   useEffect(() => {
-    const registerView = () =>
-      fetch(`/api/views/${post.slug}`, {
-        method: 'POST'
-      })
+    if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+    } else {
+      const registerView = () =>
+        fetch(`/api/views/${post.slug}`, {
+          method: 'POST'
+        })
 
-    registerView()
+      registerView()
+    }
   }, [post.slug])
 
   const infos = [
