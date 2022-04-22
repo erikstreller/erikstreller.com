@@ -1,8 +1,11 @@
 export type PostCardProps = {
   post: {
-    title: string
-    description: string
-    views: string
+    slug: string;
+    title: string;
+    summary: string;
+    puplishedAt: string;
+    readingTime: any;
+    image: string;
   }
 }
 
