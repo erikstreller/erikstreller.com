@@ -1,31 +1,9 @@
-import clsx from 'clsx'
 import { useTheme } from 'next-themes'
 import Head from 'next/head'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
 import { PropsWithChildren, useEffect, useState } from 'react'
 import { FiMoon, FiSun } from 'react-icons/fi'
 import Footer from './Footer'
-
-function NavItem({ href, text }: { href: string; text: string }) {
-  const router = useRouter()
-  const isActive = router.asPath === href
-
-  return (
-    <Link href={href}>
-      <a
-        className={clsx(
-          isActive
-            ? 'font-bold text-gray-800 dark:text-gray-200'
-            : 'rounded-lg font-normal text-gray-600 transition-all hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-800',
-          '-ml-2 px-3 py-2'
-        )}
-      >
-        {text}
-      </a>
-    </Link>
-  )
-}
+import NavItem from './NavItem'
 
 const customMeta = {
   title: 'Erik Streller – Portfolio and Blog.',
@@ -63,9 +41,11 @@ export default function PageContainer(
             <div className='space-x-6'>
               <NavItem href='/' text='Home' />
               <NavItem href='/blog' text='Blog' />
-              <NavItem href='/about' text='About' />
-            </div>
-            <div className='hidden pl-2 sm:inline-block'>
+              <NavItem
+                href='/about'
+                text='About'
+                className='hidden sm:inline'
+              />
               <NavItem href='/colophon' text='Colophon' />
             </div>
           </div>
