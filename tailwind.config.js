@@ -51,7 +51,8 @@ module.exports = {
         }
       },
       animation: {
-        flicker: 'flicker 3.5s linear infinite'
+        flicker: 'flicker 3.5s linear infinite',
+        'spin-fast': 'spin .5s linear infinite'
       }
     }
   },

@@ -1,15 +1,12 @@
 import Accent from '@/components/Accent'
 import PageContainer from '@/components/PageContainer'
-import fetcher from '@/lib/fetcher'
-import { Views } from '@/lib/types'
+import ViewCounter from '@/components/ViewCounter'
 import type { Blog } from 'contentlayer/generated'
 import { allBlogs } from 'contentlayer/generated'
 import { format, parseISO } from 'date-fns'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import Image from 'next/image'
-import { useEffect } from 'react'
 import { HiOutlineClock, HiOutlineEye } from 'react-icons/hi'
-import useSWR from 'swr'
 
 const mdxComponents = {
   Image
@@ -17,20 +14,6 @@ const mdxComponents = {
 
 export default function Post({ post }: { post: Blog }) {
   const MDXContent = useMDXComponent(post.body.code)
-  const { data } = useSWR<Views>(`/api/views/${post.slug}`, fetcher)
-  const views = data?.total
-
-  useEffect(() => {
-    if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-    } else {
-      const registerView = () =>
-        fetch(`/api/views/${post.slug}`, {
-          method: 'POST'
-        })
-
-      registerView()
-    }
-  }, [post.slug])
 
   const infos = [
     {
@@ -38,7 +21,7 @@ export default function Post({ post }: { post: Blog }) {
       icon: <HiOutlineClock />
     },
     {
-      text: (views ? new Number(views).toLocaleString() : '---') + ' views',
+      text: <ViewCounter slug={post.slug} />,
       icon: <HiOutlineEye />
     }
   ]
@@ -57,8 +40,11 @@ export default function Post({ post }: { post: Blog }) {
             {infos.map((info, id) => (
               <div key={id} className='post-info-box'>
                 {info.icon}
-                <Accent variant='yellow' className='dark:font-medium'>
-                  {info.text}
+                <Accent
+                  variant='yellow'
+                  className='flex items-center gap-[6px] dark:font-medium'
+                >
+                  {info.text} views
                 </Accent>
               </div>
             ))}

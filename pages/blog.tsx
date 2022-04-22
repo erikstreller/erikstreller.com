@@ -1,6 +1,7 @@
 import { allBlogs } from '@/.contentlayer/generated'
 import Accent from '@/components/Accent'
 import PageContainer from '@/components/PageContainer'
+import ViewCounter from '@/components/ViewCounter'
 import { pick } from '@/utils/pick'
 import clsx from 'clsx'
 import { InferGetStaticPropsType } from 'next'
@@ -88,8 +89,11 @@ export default function Blog({
                       </div>
                       <div className='post-info-box'>
                         <HiOutlineEye />
-                        <Accent variant='yellow' className='dark:font-medium'>
-                          33 views
+                        <Accent
+                          variant='yellow'
+                          className='flex items-center gap-[6px] dark:font-medium'
+                        >
+                          <ViewCounter slug={post.slug} /> views
                         </Accent>
                       </div>
                     </div>
