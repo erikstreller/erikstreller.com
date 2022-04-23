@@ -29,7 +29,7 @@ export default function FeaturedPostCard({
               {summary}
             </span>
           </div>
-          <div className='flex items-center gap-2 opacity-80'>
+          <div className='flex min-h-[24px] items-center gap-2 opacity-80 '>
             <HiOutlineEye />
             <span className='opacity-90'>
               {views ? views.toLocaleString() : <Spinner />}
