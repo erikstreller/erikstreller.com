@@ -26,7 +26,7 @@ export default function Colophon() {
           <NewTab href={links.contentlayer} className={linkColor}>
             Contenlayer
           </NewTab>
-          . The database will soon be{' '}
+          . The database is{' '}
           <NewTab href={links.planetscale} className={linkColor}>
             PlanetScale
           </NewTab>{' '}

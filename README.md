@@ -6,8 +6,10 @@
 
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Deployment**: [Vercel](https://vercel.com)
 - **Content**: [MDX](https://mdxjs.com/)
+- **Database**: [PlanetScale](https://planetscale.com/)
+- **ORM**: [Prisma](https://www.prisma.io/)
+- **Deployment**: [Vercel](https://vercel.com)
 - **Design**: [Excalidraw](https://excalidraw.com/) and [Figma](https://figma.com/)
 
 ## Running Locally
