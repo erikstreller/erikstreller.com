@@ -10,32 +10,56 @@ export default function Footer() {
   return (
     <footer className='layout'>
       <div className='h-[1px] w-full bg-slate-200 dark:bg-gray-800' />
-      <div className='flex flex-col space-y-2 py-12'>
-        {headerGroup.map(({ text, href }, id) => (
-          <Link key={id} href={href}>
-            <a
-              className={clsx(
-                pathname === href
-                  ? 'text-teal-400'
-                  : clsx(
-                      styling.textColor,
-                      'transition-opacity hover:opacity-60'
-                    ),
-                'w-fit'
-              )}
-            >
-              <p>{text}</p>
-            </a>
-          </Link>
-        ))}
-        <div className='flex items-center space-x-2 pt-6'>
-          <span className={styling.textColor}>
-            <span className='text-teal-400'>{new Date().getFullYear()}</span>{' '}
-            Erik Streller
-          </span>
-          <SiNextdotjs size={styling.iconSize} />
-          <SiTypescript size={styling.iconSize} className={color.typescript} />
-          <SiTailwindcss size={styling.iconSize} className={color.tailwind} />
+      <div className='flex justify-between py-12'>
+        <div className='flex flex-col space-y-2'>
+          {headerGroup.map(({ text, href }, id) => (
+            <Link key={id} href={href}>
+              <a
+                className={clsx(
+                  pathname === href
+                    ? 'text-teal-400'
+                    : clsx(
+                        styling.textColor,
+                        'transition-opacity hover:opacity-60'
+                      ),
+                  'w-fit'
+                )}
+              >
+                <p>{text}</p>
+              </a>
+            </Link>
+          ))}
+          <div className='flex items-center space-x-2 pt-6'>
+            <span className={styling.textColor}>
+              <span className='text-teal-400'>{new Date().getFullYear()}</span>{' '}
+              Erik Streller
+            </span>
+            <SiNextdotjs size={styling.iconSize} />
+            <SiTypescript
+              size={styling.iconSize}
+              className={color.typescript}
+            />
+            <SiTailwindcss size={styling.iconSize} className={color.tailwind} />
+          </div>
+        </div>
+        <div className='flex flex-col space-y-2'>
+          {infoGroup.map(({ text, href }, id) => (
+            <Link key={id} href={href}>
+              <a
+                className={clsx(
+                  pathname === href
+                    ? 'text-teal-400'
+                    : clsx(
+                        styling.textColor,
+                        'transition-opacity hover:opacity-60'
+                      ),
+                  'w-fit'
+                )}
+              >
+                <p>{text}</p>
+              </a>
+            </Link>
+          ))}
         </div>
       </div>
     </footer>
@@ -53,3 +77,5 @@ const headerGroup = [
   { href: '/about', text: 'About' },
   { href: '/colophon', text: 'Colophon' }
 ]
+
+const infoGroup = [{ href: '/dashboard', text: 'Dashboard' }]
