@@ -16,7 +16,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div
         className={clsx(
           'grid grid-cols-8 items-center gap-2 text-lg',
-          'py-2 px-3 '
+          'py-2 px-3'
         )}
       >
         <Accent
