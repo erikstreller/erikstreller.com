@@ -1,4 +1,5 @@
 import Accent from '@/components/Accent'
+import NewTab from '@/components/NewTab'
 import PageContainer from '@/components/PageContainer'
 import ViewCounter from '@/components/ViewCounter'
 import type { Blog } from 'contentlayer/generated'
@@ -9,7 +10,8 @@ import Image from 'next/image'
 import { HiOutlineClock, HiOutlineEye } from 'react-icons/hi'
 
 const mdxComponents = {
-  Image
+  Image,
+  NewTab
 }
 
 export default function Post({ post }: { post: Blog }) {

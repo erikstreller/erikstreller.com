@@ -27,7 +27,7 @@ export default function Blog({
         </div>
       </div>
       <div className='pb-4'>
-        <h3 className='section-heading'>Preview</h3>
+        <h3 className='section-heading'>Posts</h3>
         <div className='pt-6'>
           {posts.map((post, id) => (
             <PostCard key={id} id={id} post={post} />
