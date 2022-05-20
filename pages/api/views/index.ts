@@ -6,27 +6,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
-    await prisma.counters.delete({
-      where: {
-        slug: "atlantic-ocean",
-      },
-    })
-    await prisma.counters.delete({
-      where: {
-        slug: "porto-and-wine",
-      },
-    })
-    await prisma.counters.delete({
-      where: {
-        slug: "life-in-lisbon",
-      },
-    })
-    await prisma.counters.delete({
-      where: {
-        slug: "the-beginning",
-      },
-    })
-
     const totalViews = await prisma.counters.aggregate({
       _sum: {
         views: true
