@@ -3,22 +3,22 @@ import Image from 'next/image'
 type PhotoProps = {
   alt: string
   src: string
-  width: number
-  height: number
   description?: string
 }
 
-export default function Photo({
-  alt,
-  src,
-  width,
-  height,
-  description
-}: PhotoProps) {
+export default function Photo({ alt, src, description }: PhotoProps) {
   return (
     <div>
-      <Image alt={alt} src={src} width={width} height={height} />
-      <p className='mt-0 text-light-medium dark:text-dark-medium'>
+      <div className='relative aspect-[672/378] max-h-[378px] w-full'>
+        <Image
+          alt={alt}
+          src={src}
+          objectFit='cover'
+          layout='fill'
+          className='rounded-lg'
+        />
+      </div>
+      <p className='mt-2 -mb-1 text-light-medium dark:text-dark-medium'>
         {description}
       </p>
     </div>
