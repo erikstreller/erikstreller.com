@@ -1,4 +1,5 @@
 import Accent from '@/components/Accent'
+import ImageSlider from '@/components/ImageSlider'
 import NewTab from '@/components/NewTab'
 import PageContainer from '@/components/PageContainer'
 import Photo from '@/components/Photo'
@@ -12,7 +13,8 @@ import { HiOutlineClock, HiOutlineEye } from 'react-icons/hi'
 
 const mdxComponents = {
   NewTab,
-  Photo
+  Photo,
+  ImageSlider
 }
 
 export default function Post({ post }: { post: Blog }) {
@@ -54,12 +56,12 @@ export default function Post({ post }: { post: Blog }) {
             ))}
           </div>
         </div>
-        <div className='-mb-1 md:py-2'>
+        <div className='relative aspect-[672/378] max-h-[378px] w-full md:py-2'>
           <Image
             alt={post.title}
             src={post.image}
-            width={1200}
-            height={630}
+            objectFit='cover'
+            layout='fill'
             priority
             className='rounded-lg'
           />
