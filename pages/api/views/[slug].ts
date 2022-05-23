@@ -25,7 +25,7 @@ export default async function handler(
         where: { slug }
       });
 
-      return res.status(200).json({ total: counters?.views.toString() });
+      return res.status(200).json({ total: counters ? counters.views.toString() : '0' });
     }
   } catch (error) {
     // @ts-ignore
