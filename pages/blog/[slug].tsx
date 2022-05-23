@@ -68,9 +68,15 @@ export default function Post({ post }: { post: Blog }) {
         </div>
         <p>{post.summary}.</p>
       </article>
-      <div className='section-spacing prose mt-6 max-w-none pb-80 dark:prose-invert'>
+      <div className='prose mt-6 max-w-none dark:prose-invert'>
         <MDXContent components={mdxComponents} />
       </div>
+      <p className='mt-12 mb-4 text-light-medium dark:text-dark-medium'>
+        Written by{' '}
+        <Accent variant='yellow' className='dark:font-medium'>
+          {post.author}
+        </Accent>
+      </p>
     </PageContainer>
   )
 }
