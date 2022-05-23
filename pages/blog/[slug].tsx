@@ -66,7 +66,7 @@ export default function Post({ post }: { post: Blog }) {
             className='rounded-lg'
           />
         </div>
-        <p>{post.summary}.</p>
+        <p>{post.summary}</p>
       </article>
       <div className='prose mt-6 max-w-none dark:prose-invert'>
         <MDXContent components={mdxComponents} />

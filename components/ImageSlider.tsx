@@ -6,6 +6,7 @@ type ImageSliderProps = {
   images: {
     alt: string
     src: string
+    description?: string
   }[]
 }
 
@@ -44,7 +45,11 @@ export default function ImageSlider({ images }: ImageSliderProps) {
           </div>
         </button>
       </div>
-      <Photo alt={visibleImage.alt} src={visibleImage.src} />
+      <Photo
+        alt={visibleImage.alt}
+        src={visibleImage.src}
+        description={visibleImage.description}
+      />
     </div>
   )
 }

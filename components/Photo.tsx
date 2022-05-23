@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import Image from 'next/image'
 
 type PhotoProps = {
@@ -18,7 +19,12 @@ export default function Photo({ alt, src, description }: PhotoProps) {
           className='rounded-lg'
         />
       </div>
-      <p className='mt-2 -mb-1 text-light-medium dark:text-dark-medium'>
+      <p
+        className={clsx(
+          'text-light-medium dark:text-dark-medium',
+          description ? 'mt-2 -mb-1' : ''
+        )}
+      >
         {description}
       </p>
     </div>
