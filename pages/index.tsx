@@ -20,6 +20,10 @@ export default function Home({
 
 export function getStaticProps() {
   const posts = allBlogs
+    .sort(
+      (a, b) =>
+        Number(new Date(b.puplishedAt)) - Number(new Date(a.puplishedAt))
+    )
     .slice(0, 3)
     .map((blog) =>
       pick(blog, [
@@ -30,10 +34,6 @@ export function getStaticProps() {
         'readingTime',
         'image'
       ])
-    )
-    .sort(
-      (a, b) =>
-        Number(new Date(b.puplishedAt)) - Number(new Date(a.puplishedAt))
     )
 
   return { props: { posts } }
