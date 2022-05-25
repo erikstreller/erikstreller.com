@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import Image from 'next/image'
 import { IoNewspaperSharp } from 'react-icons/io5'
 import { SiGithub } from 'react-icons/si'
-import NewTab from './NewTab'
+import NewTab from './links/NewTab'
 
 export default function Hero() {
   return (

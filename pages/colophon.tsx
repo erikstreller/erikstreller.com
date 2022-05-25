@@ -1,4 +1,4 @@
-import NewTab from '@/components/NewTab'
+import NewTab from '@/components/links/NewTab'
 import PageContainer from '@/components/PageContainer'
 
 export default function Colophon() {

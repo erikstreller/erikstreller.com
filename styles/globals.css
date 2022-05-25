@@ -77,6 +77,9 @@ html {
   .post-info-box {
     @apply flex items-center gap-2;
   }
+  .see-more {
+    @apply text-light-minor transition-colors hover:text-coal dark:text-dark-minor dark:hover:text-light;
+  }
   .slide {
     @apply flex items-center gap-1;
   }

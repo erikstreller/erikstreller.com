@@ -1,6 +1,6 @@
 import Accent from '@/components/Accent'
 import ImageSlider from '@/components/ImageSlider'
-import NewTab from '@/components/NewTab'
+import NewTab from '@/components/links/NewTab'
 import PageContainer from '@/components/PageContainer'
 import Photo from '@/components/Photo'
 import ViewCounter from '@/components/ViewCounter'

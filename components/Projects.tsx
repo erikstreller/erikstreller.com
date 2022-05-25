@@ -1,21 +1,24 @@
 import {
-  SiChakraui,
   SiNextdotjs,
   SiReact,
   SiTailwindcss,
   SiTypescript
 } from 'react-icons/si'
+import NewTab from './links/NewTab'
 import ProjectCard from './ProjectCard'
 
 export default function Projects() {
   return (
     <div className='section-spacing'>
-      <h3 className='section-heading'>Projects</h3>
-      <div className='flex flex-col gap-6 pt-6'>
+      <h3 className='section-heading'>Featured Projects</h3>
+      <div className='mb-4 flex flex-col gap-6 pt-6'>
         {projects.map((project, id) => (
           <ProjectCard project={project} key={id} />
         ))}
       </div>
+      <NewTab href='https://github.com/erikstreller' className='see-more'>
+        See more projects &rarr;
+      </NewTab>
     </div>
   )
 }
@@ -30,6 +33,17 @@ export const color = {
 const projects = [
   {
     number: '01',
+    name: 'StayTuned',
+    description: 'Listen to the current top music albums of iTunes',
+    technologies: [
+      { name: 'Next.js', icon: <SiNextdotjs /> },
+      { name: 'Typescript', icon: <SiTypescript />, color: color.typescript },
+      { name: 'Tailwind', icon: <SiTailwindcss />, color: color.tailwind }
+    ],
+    link: 'https://staytuned-seven.vercel.app'
+  },
+  {
+    number: '02',
     name: 'Pokédex',
     description: 'Explore the first 151 Pokémon and discover the glitch',
     technologies: [
@@ -38,17 +52,6 @@ const projects = [
       { name: 'Tailwind', icon: <SiTailwindcss />, color: color.tailwind }
     ],
     link: 'https://pokedex-one-gamma.vercel.app/'
-  },
-  {
-    number: '02',
-    name: 'Data Fetching',
-    description: 'Visualizing four data fetching strategies in Next.js',
-    technologies: [
-      { name: 'Next.js', icon: <SiNextdotjs /> },
-      { name: 'Typescript', icon: <SiTypescript />, color: color.typescript },
-      { name: 'Chakra', icon: <SiChakraui />, color: color.chakra }
-    ],
-    link: 'https://nextjs-data-fetching-lac.vercel.app/'
   },
   {
     number: '03',
@@ -61,4 +64,15 @@ const projects = [
     ],
     link: 'https://erikstreller.github.io/space-intro/'
   }
+  // {
+  //   number: '04',
+  //   name: 'Data Fetching',
+  //   description: 'Visualizing four data fetching strategies in Next.js',
+  //   technologies: [
+  //     { name: 'Next.js', icon: <SiNextdotjs /> },
+  //     { name: 'Typescript', icon: <SiTypescript />, color: color.typescript },
+  //     { name: 'Chakra', icon: <SiChakraui />, color: color.chakra }
+  //   ],
+  //   link: 'https://nextjs-data-fetching-lac.vercel.app/'
+  // }
 ]

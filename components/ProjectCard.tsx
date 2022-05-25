@@ -2,7 +2,7 @@ import { ProjectCardProps } from '@/lib/types'
 import clsx from 'clsx'
 import { FiArrowUpRight } from 'react-icons/fi'
 import Accent from './Accent'
-import NewTab from './NewTab'
+import NewTab from './links/NewTab'
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (

@@ -1,6 +1,6 @@
 import { ConvertPick } from '@/utils/pick'
-import Link from 'next/link'
 import FeaturedPostCard from './FeaturedPostCard'
+import PageLink from './links/PageLink'
 
 type FeaturedPostCardProps = {
   featuredPosts: ConvertPick<{
@@ -27,11 +27,9 @@ export default function Blog({ featuredPosts }: FeaturedPostCardProps) {
           />
         ))}
       </div>
-      <Link href='/blog'>
-        <a className='text-light-minor transition-colors hover:text-coal dark:text-dark-minor dark:hover:text-light'>
-          See more posts &rarr;
-        </a>
-      </Link>
+      <PageLink href='/blog' className='see-more'>
+        See more posts &rarr;
+      </PageLink>
     </div>
   )
 }
