@@ -48,7 +48,7 @@ const links = [
   {
     icon: <IoNewspaperSharp />,
     name: 'Resume',
-    link: 'https://drive.google.com/file/d/1HDKvDmOE0kh00vJqId8sFFXsgB-EbGCi/view?usp=sharing'
+    link: 'https://drive.google.com/file/d/1oh3SjjeVADjvdcUS1UOUhaCU41xVDA-i/view?usp=sharing'
   },
   {
     icon: <SiGithub />,
