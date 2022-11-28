@@ -46,11 +46,6 @@ export default function Hero() {
 
 const links = [
   {
-    icon: <IoNewspaperSharp />,
-    name: 'Resume',
-    link: 'https://drive.google.com/file/d/1oh3SjjeVADjvdcUS1UOUhaCU41xVDA-i/view?usp=sharing'
-  },
-  {
     icon: <SiGithub />,
     name: 'GitHub',
     link: 'https://github.com/erikstreller'
